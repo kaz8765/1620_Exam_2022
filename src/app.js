@@ -81,20 +81,32 @@ const contactsList = [
 // Target + sign
 const loadCards = document.querySelector('#display_all_contacts')
 
+function loadContacts(contactsList){
+  for (const index in contactsList){
+    loadCards.insertAdjacentHTML('afterbegin', contactsList[index].name+contactsList[index].phone+contactsList[index].image+contactsList[index].email+contactsList[index].ID+'\n')
+
+  }
+
+}
+
+loadContacts(contactsList)
+
+
+
+
+
 // // Target area to write note in
 // const noteWriteArea = document.querySelector('.write-note-area')
 
-loadCards.addEventListener('click', test)
 
-function test(evt){
-  console.log(evt)
-}
+
+// function test(evt){
+//   console.log(evt)
+// }
 // Function to display textArea in correct area and target new DOM objects
 
 
-function displayNote(evt) {
-    showNote.innerHTML = ''
-    noteWriteArea.insertAdjacentHTML('beforeend', contactsList)
+
 
     // Target new DOM objects the cancel and save button
     // const cancelButton = document.querySelector('.b')
@@ -103,8 +115,8 @@ function displayNote(evt) {
     // cancelButton.addEventListener('click', removeNote)
     // saveButton.addEventListener('click', createNote)
     // saveButton.addEventListener('click', removeNote)
-}
+
 
 // Ensure clicking plus sign does not create duplicate text areas hence once:true
 
-plusSign.addEventListener('click', displayNote, {once: true});
+// plusSign.addEventListener('click', displayNote, {once: true});
