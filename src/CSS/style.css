@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+*{
+
+  background-color: var(--white);
+}
 img {
   max-width: 100%;
 }
@@ -101,11 +105,13 @@ main {
 
 #display_all_contacts {
   display: flex;
+  /* background-color: var(--red); */
   /* flex-grow: 0; */
   flex-direction: row;
-  align-items: center;
-  padding:30px;
-  gap: 20px;
+  flex-wrap: no-wrap;
+  align-items:flex-start;
+  padding:0px;
+  gap: 2px;
 }
 
   
@@ -128,7 +134,7 @@ main {
 #display_all_contacts p {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--black);
+  
 }
 
 footer {

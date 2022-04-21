@@ -74,8 +74,20 @@ function loadContacts(contactsList){
 loadContacts(contactsList)
 
 
+function displaySingleCard(evt){
+  console.log(evt.target)
+}
 loadCards.addEventListener('click',displaySingleCard)
-
 const displaySingle=document.querySelector('#display_single_contact')
+
+
+
+
+
+
+
+
+
+
 
 
