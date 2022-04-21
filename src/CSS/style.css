@@ -101,10 +101,14 @@ main {
 
 #display_all_contacts {
   display: flex;
-  flex-grow: 0;
+  /* flex-grow: 0; */
+  flex-direction: row;
+  align-items: center;
+  padding:30px;
   gap: 20px;
-  padding: 20px;
 }
+
+  
 
 #display_all_contacts div {
   display: flex;
