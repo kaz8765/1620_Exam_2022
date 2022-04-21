@@ -52,3 +52,59 @@ const contactsList = [
 ]
 
 // Your code goes here
+
+
+'use strict';
+// List of notes
+// const notesList = [{
+//         title: "first note",
+//         noteBody: "this is an example note",
+//         id: 1
+//     }]
+
+// Target area to store note in
+// const noteList = document.querySelector('.container')
+// noteList.innerHTML = '<div class="display"></div>'
+
+// Define text area
+// const textArea = `
+// <textarea id="note" name="story" rows="5" cols="33" enabled>
+// </textarea>
+
+// <div class="options">
+// <button class="a">save</button>
+// <button class="b">cancel</button>
+// </div>
+
+// `
+
+// Target + sign
+const loadCards = document.querySelector('#display_all_contacts')
+
+// // Target area to write note in
+// const noteWriteArea = document.querySelector('.write-note-area')
+
+loadCards.addEventListener('click', test)
+
+function test(evt){
+  console.log(evt)
+}
+// Function to display textArea in correct area and target new DOM objects
+
+
+function displayNote(evt) {
+    showNote.innerHTML = ''
+    noteWriteArea.insertAdjacentHTML('beforeend', contactsList)
+
+    // Target new DOM objects the cancel and save button
+    // const cancelButton = document.querySelector('.b')
+    // const saveButton = document.querySelector('.a')
+
+    // cancelButton.addEventListener('click', removeNote)
+    // saveButton.addEventListener('click', createNote)
+    // saveButton.addEventListener('click', removeNote)
+}
+
+// Ensure clicking plus sign does not create duplicate text areas hence once:true
+
+plusSign.addEventListener('click', displayNote, {once: true});
